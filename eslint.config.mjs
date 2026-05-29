@@ -1,4 +1,29 @@
-// rules/no-cross-layer.ts
+// rules/stability-boundary.ts
+
+export default {
+  meta: {
+    type: "problem",
+    docs: {
+      description: "ensures stabilityKernel invariants are respected",
+    },
+  },
+
+  create(context: any) {
+    return {
+      CallExpression(node: any) {
+        const callee = node.callee?.name;
+
+        if (callee === "manifoldOptimizer" && context.getFilename().includes("unsafe")) {
+          context.report({
+            node,
+            message:
+              "Unbounded optimizer usage outside stabilityKernel context",
+          });
+        }
+      },
+    };
+  },
+};// rules/no-cross-layer.ts
 
 import { ARCHITECTURE_GRAPH } from "../graphSpec";
 
