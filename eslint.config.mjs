@@ -1,4 +1,17 @@
-// eslint-kernel/index.ts
+import { defineConfig } from "eslint/config";
+import kernel from "./src/eslint-kernel";
+
+export default defineConfig([
+  {
+    plugins: {
+      "cik-kernel": kernel,
+    },
+    rules: {
+      "cik-kernel/no-cross-layer": "error",
+      "cik-kernel/stability-boundary": "warn",
+    },
+  },
+]);// eslint-kernel/index.ts
 
 import noCrossLayer from "./rules/no-cross-layer";
 import stabilityBoundary from "./rules/stability-boundary";
