@@ -1,4 +1,12 @@
-// rules/stability-boundary.ts
+// eslint-kernel/index.ts
+
+import noCrossLayer from "./rules/no-cross-layer";
+import stabilityBoundary from "./rules/stability-boundary";
+
+export const rules = {
+  "no-cross-layer": noCrossLayer,
+  "stability-boundary": stabilityBoundary,
+};// rules/stability-boundary.ts
 
 export default {
   meta: {
