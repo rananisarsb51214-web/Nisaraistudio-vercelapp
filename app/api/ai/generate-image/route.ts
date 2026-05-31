@@ -1,4 +1,11 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
+
+export async function POST() {
+  // Stripe checkout session placeholder
+  return NextResponse.json({
+    url: "https://checkout.stripe.com/session"
+  });
+}import { NextResponse } from 'next/server';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { storage } from '@/lib/firebase';
 import { v4 as uuidv4 } from 'uuid';
