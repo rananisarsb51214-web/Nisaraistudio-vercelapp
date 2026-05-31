@@ -1,4 +1,13 @@
-import Link from "next/link";
+import { NextResponse } from "next/server";
+
+export async function POST(req: Request) {
+  const { prompt } = await req.json();
+
+  return NextResponse.json({
+    output: `AI processed: ${prompt}`,
+    agent: "executor"
+  });
+}import Link from "next/link";
 
 export default function Sidebar() {
   return (
