@@ -1,4 +1,16 @@
-export default function BillingPage() {
+import Link from "next/link";
+
+export default function Sidebar() {
+  return (
+    <aside className="w-60 border-r border-gray-800 p-4 hidden md:block">
+      <nav className="space-y-3">
+        <Link href="/dashboard">Dashboard</Link>
+        <Link href="/billing">Billing</Link>
+        <Link href="/auth">Auth</Link>
+      </nav>
+    </aside>
+  );
+}export default function BillingPage() {
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-bold">Billing</h1>
