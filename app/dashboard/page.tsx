@@ -1,4 +1,20 @@
-'use client';
+export default function BillingPage() {
+  return (
+    <div className="space-y-4">
+      <h1 className="text-2xl font-bold">Billing</h1>
+
+      <div className="bg-zinc-950 p-6 rounded-xl border border-gray-800">
+        <p className="text-gray-400">
+          Upgrade to unlock advanced AI agents
+        </p>
+
+        <button className="mt-4 px-4 py-2 bg-white text-black rounded-lg">
+          Upgrade Now
+        </button>
+      </div>
+    </div>
+  );
+}'use client';
 import { useAuth } from '@/components/auth-provider';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
