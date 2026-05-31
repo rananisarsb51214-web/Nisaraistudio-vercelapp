@@ -11,22 +11,7 @@ export type Tenant = {
   credits: number;
 };export type MarketTask = {
   id: string;
-  tenantId: string;
-
-  type: "compute" | "analysis" | "generation";
-
-  payload: any;
-
-  priceCredits: number;
-
-  status: "open" | "assigned" | "completed";
-
-  assignedAgentId?: string;
-
-  createdAt: number;
-};export type Agent = {
-  id: string;
-  name: string;
+  
 
   reputation: number;
 
