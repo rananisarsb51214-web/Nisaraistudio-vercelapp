@@ -151,4 +151,21 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-}
+}export type Tenant = {
+  id: string;
+  name: string;
+  plan: "free" | "pro" | "enterprise";
+  createdAt: number;
+};export type User = {
+  id: string;
+  tenantId: string;
+  email: string;
+  role: "admin" | "member";
+  credits: number;
+};export type User = {
+  id: string;
+  tenantId: string;
+  email: string;
+  role: "admin" | "member";
+  credits: number;
+};
